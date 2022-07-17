@@ -16,6 +16,7 @@ pipeline {
                     sh 'gh release list'
                     sh 'npm ci'
                     sh 'npm install react@v16.0.0'
+                    sh 'git add .'
                     sh 'git commit -m "fix: updated version"'
                     sh 'gh pr create --title "Pull request title" --body "Pull request body"'
                 }
