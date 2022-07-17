@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('DraftPR') {
             steps {
-               script { 
+                script { 
                     echo 'Starting Draft PR'
                     sh "echo ${params.Version}"
                     sh 'git checkout -b "version-update"'
@@ -18,7 +18,8 @@ pipeline {
                     sh 'npm install react@v16.0.0'
                     sh 'git commit -m "fix: updated version"'
                     sh 'gh pr create --title "Pull request title" --body "Pull request body"'
-
+                }
+            }    
         }
     }
 }
