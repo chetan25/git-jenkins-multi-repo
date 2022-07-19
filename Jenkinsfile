@@ -11,7 +11,8 @@ pipeline {
             steps {
                 script { 
                     echo 'Starting Draft PR'
-                    sh "echo ${params.Version}"
+                    sh "echo ${params.VERSION}"
+                    sh "echo ${VERSION}"
                     // sh 'git checkout -b "version-update-5"'
                     sh 'gh release list'
                     // sh 'npm install react@v16.0.0'
@@ -26,7 +27,7 @@ pipeline {
             steps {
                 script { 
                     echo 'Testing Version'
-                    sh "echo ${params.Version}"
+                    sh "echo ${params.VERSION}"
                 }
             }    
         }
