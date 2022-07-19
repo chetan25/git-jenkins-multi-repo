@@ -12,7 +12,7 @@ pipeline {
                 script { 
                     echo 'Starting Draft PR'
                     sh "echo ${params.Version}"
-                    sh 'git checkout -b "version-update-5"'
+                    // sh 'git checkout -b "version-update-5"'
                     sh 'gh release list'
                     // sh 'npm install react@v16.0.0'
                     // sh 'git add package.json package-lock.json'
