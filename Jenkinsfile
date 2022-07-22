@@ -28,6 +28,7 @@ pipeline {
                 script { 
                     echo 'Testing Version'
                     sh "echo ${params.VERSION}"
+                    sh "echo ${params.PR_NAME}"
                 }
             }    
         }
